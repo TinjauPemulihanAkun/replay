@@ -1,33 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Gambar</title>
+    <title>Nama Grup</title>
     <style>
         body {
-            /* Mengatur gambar latar belakang */
-            background-image: url('gambar.png');
-            /* Mengatur ukuran gambar */
-            background-size: cover;
-            /* Mengatur posisi gambar */
-            background-position: center center;
-            /* Membuat gambar tetap di belakang konten */
-            background-attachment: fixed;
-            /* Memberi warna latar belakang sebagai fallback jika gambar tidak dapat dimuat */
-            background-color: #eaeaea;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
-        /* Tambahkan gaya tambahan jika diperlukan */
-        /* Misalnya, mengatur warna teks */
-        p {
+        .chat-container {
+            background-color: #f1f0f0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .chat-box {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .message-time {
+            text-align: right;
+            margin-bottom: 0px;
+            font-size: 10px;
+            color: #888;
+        }
+
+        .user-message,
+        .friend-message {
+            background-color: #dcf8c6;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            margin-right: 10px;
+        }
+
+        .message-input {
+            width: 80%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .send-button {
+            width: 25%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #4caf50;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-top: 1px solid #4caf50;
+            border-radius: 100px;
+            cursor: pointer;
+            text-align: center;
+            margin: 0 auto; /* Menengahkan tombol */
+            display: block; /* Membuat tombol menjadi blok sehingga dapat diatur margin */
+        }
+
+        .send-icon::before {
+            content: "Join Group"; /* Text untuk tombol */
+            font-size: 15px;
+        }
+
+        .send-button a {
+            display: block;
+            text-decoration: none;
             color: white;
         }
     </style>
 </head>
+
 <body>
-
-    <p>Ini adalah konten halaman.</p>
-
+    <div class="chat-container">
+        <h3 style="text-align: center;">Nama Grup</h3>
+        <div class="chat-box">
+            <p class="message-time">12:00</p>
+            <p class="friend-message"><img src="gambar.png" alt="gambar" width="200" height="200"></p>
+            <p class="message-time">12:01</p>
+            <p class="friend-message">nih ada video baru viral nih</p>
+            <p class="message-time">12:01</p>
+            <p class="user-message">gua juga punya cok</p>
+            <p class="message-time">12:01</p>
+            <p class="friend-message">mana coba kirim?</p>
+            <p class="message-time">12:01</p>
+            <p class="user-message"><img src="gambar.png" alt="gambar" width="200" height="200"></p></p>
+            <p class="message-time">12:01</p>
+        </div>
+        <h2 style="text-align: center;">Link</h2>
+        <button class="send-button"><a href="https://www.contohwebsite.com" target="_blank"><span class="send-icon"></span></a></button>
+    </div>
 </body>
+
 </html>
